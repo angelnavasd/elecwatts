@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@layer base {
+  :root {
+    --primary: #0f223d;
+    --primary-hover: #0a172a;
+    --accent-gold: #c5a059;
+    --accent-gold-light: #dfc288;
+    --surface-bg: #fafaf9;
+    --border-subtle: #e5e7eb;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--text-main);
+    font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Restrained animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Editorial hairline rules */
+.border-hairline {
+  border-color: rgba(226, 232, 240, 0.8);
+}

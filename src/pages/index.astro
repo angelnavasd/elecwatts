@@ -1,0 +1,80 @@
+---
+import "../styles/global.css";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { CarrierGrid } from "@/components/CarrierGrid";
+import { CoverageSpectrum } from "@/components/CoverageSpectrum";
+import { AdvisoryDifference } from "@/components/AdvisoryDifference";
+import { ClientTestimonials } from "@/components/ClientTestimonials";
+import { QuoteBuilder } from "@/components/QuoteBuilder";
+import { FaqSection } from "@/components/FaqSection";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="/images/e360-logo.webp" />
+    <title>e360 Insurance Services | Commercial, Property & Fleet Insurance in California</title>
+    <meta 
+      name="description" 
+      content="Premier independent insurance agency based in Encino, Los Angeles. 25+ years specializing in California apartment buildings, HOA master policies, trucking fleets, and statutory workers' compensation across CA, NV, AZ, and TX." 
+    />
+    
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="e360 Insurance Services | California Commercial & Property Insurance" />
+    <meta property="og:description" content="Independent brokerage representing 20+ top-rated carriers including Chubb, Travelers, and Nationwide. 25+ years protecting California businesses and property owners." />
+    <meta property="og:image" content="/images/hero-bg.jpg" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["InsuranceAgency", "LocalBusiness"],
+        "name": "e360 Insurance Services",
+        "url": "https://www.e360insurance.com/",
+        "logo": "https://www.e360insurance.com/wp-content/uploads/2026/04/E360-insurance.webp",
+        "telephone": "+1-888-862-6750",
+        "email": "info@e360insurance.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "16000 Ventura Blvd, Suite 400",
+          "addressLocality": "Encino",
+          "addressRegion": "CA",
+          "postalCode": "91436",
+          "addressCountry": "US"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "200"
+        },
+        "areaServed": ["California", "Nevada", "Arizona", "Texas"]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-amber-400/30 selection:text-blue-950">
+    
+    <Header client:load />
+
+    <main id="main-content">
+      <Hero client:load />
+      <CarrierGrid client:load />
+      <CoverageSpectrum client:load />
+      <AdvisoryDifference client:load />
+      <ClientTestimonials client:load />
+      <QuoteBuilder client:load />
+      <FaqSection client:load />
+    </main>
+
+    <Footer client:load />
+
+    <!-- Interactive Toast Provider (Shadcn Sonner) -->
+    <Toaster client:load position="bottom-right" richColors />
+
+  </body>
+</html>
